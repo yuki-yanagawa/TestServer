@@ -1,0 +1,3 @@
+GET /test emsms.checkhandle.CheckHandle.main
+GET /sample emsms.checkhandle.CheckHandle.main
+POST /postsample emsms.checkhandle.CheckHandle.main

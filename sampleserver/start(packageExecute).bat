@@ -1,0 +1,1 @@
+java -jar .\target\sampleserver-1.0-SNAPSHOT.jar

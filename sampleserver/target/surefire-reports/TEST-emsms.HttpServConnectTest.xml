@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report.xsd" name="emsms.HttpServConnectTest" time="0.001" tests="1" errors="0" skipped="0" failures="0">
+  <properties>
+    <property name="sun.desktop" value="windows"/>
+    <property name="awt.toolkit" value="sun.awt.windows.WToolkit"/>
+    <property name="file.encoding.pkg" value="sun.io"/>
+    <property name="java.specification.version" value="1.8"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="MS932"/>
+    <property name="java.class.path" value="C:\Users\user\Documents\sampleserver\sampleserver\target\test-classes;C:\Users\user\Documents\sampleserver\sampleserver\target\classes;C:\Users\user\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="java.vm.vendor" value="Amazon.com Inc."/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://aws.amazon.com/corretto/"/>
+    <property name="user.timezone" value="Asia/Tokyo"/>
+    <property name="java.vm.specification.version" value="1.8"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="user.country" value="JP"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\bin"/>
+    <property name="sun.java.command" value="C:\Users\user\AppData\Local\Temp\surefire5326624101011138077\surefirebooter7167990567780033179.jar C:\Users\user\AppData\Local\Temp\surefire5326624101011138077 2023-05-25T23-17-19_144-jvmRun1 surefire6947618155221336305tmp surefire_03231592545601695161tmp"/>
+    <property name="surefire.test.class.path" value="C:\Users\user\Documents\sampleserver\sampleserver\target\test-classes;C:\Users\user\Documents\sampleserver\sampleserver\target\classes;C:\Users\user\.m2\repository\junit\junit\4.11\junit-4.11.jar;C:\Users\user\.m2\repository\org\hamcrest\hamcrest-core\1.3\hamcrest-core-1.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\user"/>
+    <property name="user.language" value="ja"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.home" value="C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre"/>
+    <property name="basedir" value="C:\Users\user\Documents\sampleserver\sampleserver"/>
+    <property name="file.separator" value="\"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="java.awt.graphicsenv" value="sun.awt.Win32GraphicsEnvironment"/>
+    <property name="surefire.real.class.path" value="C:\Users\user\AppData\Local\Temp\surefire5326624101011138077\surefirebooter7167990567780033179.jar"/>
+    <property name="sun.boot.class.path" value="C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\resources.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\rt.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\sunrsasign.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\jsse.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\jce.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\charsets.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\jfr.jar;C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\classes"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="1.8.0_342-b07"/>
+    <property name="user.name" value="user"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.endorsed.dirs" value="C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\endorsed"/>
+    <property name="java.runtime.name" value="OpenJDK Runtime Environment"/>
+    <property name="file.encoding" value="MS932"/>
+    <property name="java.vm.name" value="OpenJDK 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\user\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://github.com/corretto/corretto-8/issues/"/>
+    <property name="java.io.tmpdir" value="C:\Users\user\AppData\Local\Temp\"/>
+    <property name="java.version" value="1.8.0_342"/>
+    <property name="user.dir" value="C:\Users\user\Documents\sampleserver\sampleserver"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="java.awt.printerjob" value="sun.awt.windows.WPrinterJob"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="java.library.path" value="C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\bin;C:\WINDOWS\Sun\Java\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\Program Files (x86)\WANdisco\Subversion\Apache2\bin;C:\Program Files (x86)\WANdisco\Subversion;C:\Program Files\Amazon Corretto\jdk1.8.0_342\bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files (x86)\Intel\Intel(R) Management Engine Components\DAL;C:\Program Files\Intel\Intel(R) Management Engine Components\DAL;C:\opt\apache-maven-3.8.6\bin;C:\Program Files\TortoiseSVN\bin;C:\Program Files\dotnet\;C:\Program Files (x86)\sbt\bin;C:\Program Files\Git\cmd;C:\Users\user\Documents\Atom\Atom x64;C:\Users\user\AppData\Local\Microsoft\WindowsApps;C:\Users\user\.dotnet\tools;C:\Users\user\AppData\Local\Coursier\data\bin;C:\Users\user\Documents\Atom\Atom x64;;C:\Users\user\AppData\Local\Programs\Microsoft VS Code\bin;."/>
+    <property name="java.vm.info" value="mixed mode"/>
+    <property name="java.vendor" value="Amazon.com Inc."/>
+    <property name="java.vm.version" value="25.342-b07"/>
+    <property name="java.ext.dirs" value="C:\Program Files\Amazon Corretto\jdk1.8.0_342\jre\lib\ext;C:\WINDOWS\Sun\Java\lib\ext"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="52.0"/>
+  </properties>
+  <testcase name="connectTest" classname="emsms.HttpServConnectTest" time="0"/>
+</testsuite>
