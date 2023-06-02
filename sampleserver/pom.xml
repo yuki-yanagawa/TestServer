@@ -54,7 +54,7 @@
           <configuration>
           <archive>
               <manifest>
-                <mainClass>ems.HTTPHandle.reciver.HttpReceiverManager</mainClass>
+                <mainClass>emsms.HTTPHandle.reciver.HttpReceiverManager</mainClass>
                 <addClasspath>true</addClasspath>
                 <addExtensions>false</addExtensions>
               </manifest>
