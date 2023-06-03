@@ -1,6 +1,7 @@
 package emsms.router;
 
 import java.lang.reflect.Method;
+import java.util.Map;
 
 public class RouteContainer {
 	public static RouteContainer routeContainer = new RouteContainer();
@@ -28,7 +29,7 @@ public class RouteContainer {
 		Method[] methods = actionClass.getMethods();
 		for(Method m : methods) {
 			if(m.getName().equals(method)) {
-				return m.invoke(action, arglist);
+				return m.invoke(action, (Map<String,Object>)arglist);
 			}
 		}
 		return new String();
