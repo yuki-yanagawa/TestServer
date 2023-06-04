@@ -4,5 +4,10 @@
 	<classpathentry kind="src" path="sampleserver/src/test/java"/>
 	<classpathentry kind="lib" path="sampleserver/target/sampleserver-1.0-SNAPSHOT.jar"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="lib" path="sampleserver/lib/hamcrest-core-1.3.jar"/>
+	<classpathentry kind="lib" path="sampleserver/lib/jackson-core-2.2.3.jar"/>
+	<classpathentry kind="lib" path="sampleserver/lib/junit-4.11.jar"/>
+	<classpathentry kind="lib" path="sampleserver/lib/jackson-annotations-2.2.3.jar"/>
+	<classpathentry kind="lib" path="sampleserver/lib/jackson-databind-2.2.3.jar"/>
 	<classpathentry kind="output" path="sampleserver/target/classes"/>
 </classpath>

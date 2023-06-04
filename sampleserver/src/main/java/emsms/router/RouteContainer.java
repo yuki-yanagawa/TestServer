@@ -1,6 +1,7 @@
 package emsms.router;
 
 import java.lang.reflect.Method;
+import java.util.HashMap;
 import java.util.Map;
 
 public class RouteContainer {
@@ -29,7 +30,15 @@ public class RouteContainer {
 		Method[] methods = actionClass.getMethods();
 		for(Method m : methods) {
 			if(m.getName().equals(method)) {
-				return m.invoke(action, (Map<String,Object>)arglist);
+				try {
+					return m.invoke(action, (Map<String,Object>)arglist);
+				} catch(Exception e) {
+					e.printStackTrace();
+					System.out.println(e.getCause().getMessage());
+				}
+//				Map<String,Object> test = new HashMap<String, Object>();
+//				test.put("test", "data");
+//				return m.invoke(action, (Map<String,Object>)test);
 			}
 		}
 		return new String();

@@ -96,6 +96,7 @@ public class HttpClientRequestHandle extends Thread{
 				retStr = createResponseHeaderBad();
 			} else {
 				String requestPrameterData = "";
+				Map<String,Object> reqMap = null;
 				if(requestMethod.toUpperCase().equals("POST")) {
 					int dataLength = 0;
 					try {
@@ -105,7 +106,7 @@ public class HttpClientRequestHandle extends Thread{
 					}
 					if(dataLength == 0) {
 						try {
-							retStr = createResponseDataForJson(actionCalssCallHandler(actionClassPath, requestPrameterData),"json");
+							retStr = createResponseDataForJson(actionCalssCallHandler(actionClassPath, new HashMap<String,Object>()),"json");
 						} catch (Exception e){
 							retStr = createResponseHeaderBad();
 						}
@@ -116,10 +117,15 @@ public class HttpClientRequestHandle extends Thread{
 						} catch (UnsupportedEncodingException e) {
 							requestPrameterData = "";
 						}
+						if(requestPrameterData.trim().equals("")) {
+							reqMap = new HashMap<>();
+						} else {
+							reqMap = createReqParamMap(requestPrameterData);
+						}
 					}
 				}
 				try {
-					retStr = createResponseDataForJson(actionCalssCallHandler(actionClassPath, requestPrameterData),"json");
+					retStr = createResponseDataForJson(actionCalssCallHandler(actionClassPath, reqMap),"json");
 				} catch (Exception e){
 					retStr = createResponseHeaderBad();
 				}
@@ -190,7 +196,7 @@ public class HttpClientRequestHandle extends Thread{
 		return retStr;
 	}
 	
-	private String actionCalssCallHandler(String actionClassPath, String requestParameterData) throws Exception {
+	private String actionCalssCallHandler(String actionClassPath, Object requestParameterData) throws Exception {
 		return (String)RouteContainer.getInstance().callFunction(actionClassPath, requestParameterData);
 	}
 	
@@ -201,6 +207,42 @@ public class HttpClientRequestHandle extends Thread{
 				requestparameterMap.put(tmpLine[0].toUpperCase().trim(), tmpLine[1].toUpperCase().trim());
 			}
 		}
+	}
+	
+	private Map<String, Object> createReqParamMap(String reqParamRawData) {
+		//if(reqParamRawData.substring(0,1).equals("{") && reqParamRawData.substring(reqParamRawData.length()-1).equals("}")){
+		if(reqParamRawData.matches("^\\{.*\\}")) {
+			return createReqParamMapForJsonParam(reqParamRawData);
+		} else {
+			return createReqParamMapForSubmitParam(reqParamRawData);
+		}
+	}
+	
+	private Map<String, Object> createReqParamMapForJsonParam(String reqParamRawData) {
+		Map<String, Object> retMap = new HashMap<String,Object>();
+		reqParamRawData = reqParamRawData.replaceAll("\\{|\\}", "");
+		String[] reqParamRawDataLine = reqParamRawData.split(",");
+		try {
+			for(String r : reqParamRawDataLine) {
+				String key = r.split(":")[0].trim();
+				String value = r.split(":")[1].trim();
+				retMap.put(delimterStringQuataionType(key),delimterStringQuataionType(value));
+			}
+		} catch(Exception e) {
+			retMap = new HashMap<String, Object>();
+		}
+		return retMap;
+	}
+	
+	private Map<String, Object> createReqParamMapForSubmitParam(String reqParamRawData) {
+		return new HashMap<String,Object>();
+	}
+	
+	private String delimterStringQuataionType(String data) {
+		if(data.matches("^\".*\"$")) {
+			data = data.replaceAll("^\"|\"$", "");
+		}
+		return data;
 	}
 
 }
